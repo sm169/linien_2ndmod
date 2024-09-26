@@ -27,6 +27,8 @@ from migen import (
     Signal,
     bits_for,
 )
+from migen.fhdl.specials import Memory
+
 from misoc.interconnect import csr_bus
 from misoc.interconnect.csr import AutoCSR, CSRStatus, CSRStorage
 
@@ -245,7 +247,7 @@ class LinienModule(Module, AutoCSR):
         self.submodules.csrbanks = csr_bus.CSRBankArray(
             self,
             lambda name, mem: csr_map[
-                name if mem is None else name + "_" + mem.name_override
+                name if mem is None or not isinstance(mem, Memory) or mem.name_override != "sw_samples" else name + "_" + mem.name_override
             ],
         )
         self.submodules.sys2csr = Sys2CSR()

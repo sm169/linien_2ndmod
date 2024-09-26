@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Sep 19 18:15:18 2024
+# Process ID: 30284
+# Current directory: C:/linien-master/gateware/build
+# Command line: vivado.exe -mode batch -source top.tcl
+# Log file: C:/linien-master/gateware/build/vivado.log
+# Journal file: C:/linien-master/gateware/build\vivado.jou
+# Running On        :QroScott
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :12th Gen Intel(R) Core(TM) i7-1255U
+# CPU Frequency     :2611 MHz
+# CPU Physical cores:10
+# CPU Logical cores :12
+# Host memory       :16874 MB
+# Swap memory       :42949 MB
+# Total Virtual     :59823 MB
+# Available Virtual :19435 MB
+#-----------------------------------------------------------
+source top.tcl
+# create_project -force -name top -part xc7z010-clg400-1
+ERROR: [Project 1-161] Failed to remove the directory 'C:/linien-master/gateware/build/top.runs'. The directory might be in use by some other process.
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 19 18:15:24 2024...
