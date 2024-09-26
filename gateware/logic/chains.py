@@ -58,7 +58,7 @@ class FastChain(Module, AutoCSR):
         self.comb += [
             x.eq(self.adc << s),
             self.demod.x.eq(self.adc),
-            self.demod.phase.eq(mod.phase),
+            self.demod.phase.eq(mod.carrier_phase),
         ]
         ya = Signal((width + 3, True))
         self.sync += (ya.eq(((dy >> s))),)

@@ -323,7 +323,7 @@ class LinienModule(Module, AutoCSR):
                 )
                 + Mux(
                     self.logic.mod_channel.storage == n_channel,
-                    self.logic.mod.y,
+                    self.logic.mod.fm_wave + self.logic.mod.mod_wave,
                     0,
                 )
                 + Mux(
