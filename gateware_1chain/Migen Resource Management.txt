@@ -1,0 +1,42 @@
+
+Remove cordic instantiation duplication (if functions instantiate cordic but then are used multiple times the resources usage will be duplicated each time)
+
+	Instantiate cordic in the top level module once if and not in each submodule
+		Tbf demodulate is instantiated on its own in connecting file so it shouldn’t be duplicated
+	
+	Can't run different inputs into cordic simultaneously, but we could time multiplex the inputs to the cordic module
+	
+Duplicates should be optimised away when using advanced synthesis tools (hence they all end up as one top file!)
+	However when searching for cordic in the synthesized design there appears to be separate cordic entries for fast a/b and mod
+	However the duplicated mod in fast a/b seems to have been optimized
+
+To get an idea could built each module individually! Or keep hierachy when building and view hierarchial resource reports
+
+High order filters are hungry : due to complex arithmetic, high bit width, pipelined arch, parameterisable design, csr interface and multiple filter stages
+
+PID logic can be hungry : due to arithmetic
+
+Autolock can be hungry : due to decision making
+
+Cordic could be inefficient :  due to complex arithmetic
+
+
+
+Good way of seeing how many resources specific code uses after synthesis is opening the synthesised design in vivado and searching cells (not nets) for that code name (e.i. iir) and the number of cells in search is a good indicator of how many luts and other fpga resources that code takes up!
+	Not perfect some cell may be there for logical groups or abstractions but generally it is a good indicator
+		Add filter for primitive type to improve this?
+	
+	
+
+	Autolock : 2000
+	
+	Cordic : 1245 (think this iterative not pipelined tho)
+	
+	IIR : 12000
+		7000 lut
+		3000 flop
+	
+	PID: 900
+
+
+

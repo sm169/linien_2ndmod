@@ -1,0 +1,37 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Thu Sep 19 18:23:49 2024
+| Host         : QroScott running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -file top_utilization_hierarchical_synth.rpt
+| Design       : top
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++-------------------------------------+--------------------------------------------+------------+------------+---------+------+-------+--------+--------+------------+
+|               Instance              |                   Module                   | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs  | RAMB36 | RAMB18 | DSP Blocks |
++-------------------------------------+--------------------------------------------+------------+------------+---------+------+-------+--------+--------+------------+
+| top                                 |                                      (top) |      14164 |      14164 |       0 |    0 | 11155 |     35 |      1 |         80 |
+|   (top)                             |                                      (top) |      12856 |      12856 |       0 |    0 |  9245 |      7 |      1 |         80 |
+|   axi_slave                         |                                  axi_slave |         43 |         43 |       0 |    0 |   148 |      0 |      0 |          0 |
+|   bus_clk_bridge                    |                             bus_clk_bridge |          2 |          2 |       0 |    0 |    32 |      0 |      0 |          0 |
+|   red_pitaya_scope                  |                           red_pitaya_scope |       1255 |       1255 |       0 |    0 |  1730 |     28 |      0 |          0 |
+|     (red_pitaya_scope)              |                           red_pitaya_scope |       1005 |       1005 |       0 |    0 |  1668 |     28 |      0 |          0 |
+|     i_bridge                        |                           bus_clk_bridge_0 |        250 |        250 |       0 |    0 |    62 |      0 |      0 |          0 |
+|   system_processing_system7_0_0     |              system_processing_system7_0_0 |          8 |          8 |       0 |    0 |     0 |      0 |      0 |          0 |
+|     (system_processing_system7_0_0) |              system_processing_system7_0_0 |          8 |          8 |       0 |    0 |     0 |      0 |      0 |          0 |
+|     inst                            | processing_system7_v5_4_processing_system7 |          0 |          0 |       0 |    0 |     0 |      0 |      0 |          0 |
++-------------------------------------+--------------------------------------------+------------+------------+---------+------+-------+--------+--------+------------+
+
+

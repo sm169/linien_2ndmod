@@ -1,0 +1,16 @@
+Use yield to step thru 1 cycle at a time not possible to skip cycles
+
+To test for lots of clock cycles migen simulator is too slow so it is best to convert to verilog and run in a verilog simulator that is faster i.e. verilator
+	
+Use Cocotb for faster simulations in verilator/other simulators
+
+	Cocotb is written in python so it would allow you debug higher level python (e.g. in linien server) and simulate the fpga code in the same code file?
+	
+	Write interface that hands migen code to cocotb nicely:
+		Convert migen code to verilog
+		
+		Presents register names to cocotb
+		
+		Ensure that external python code is writing to the correct registers
+		
+Write script that reconverts migen file and runs cocotb sim if nothing needs to be changed in the cocotb sim 

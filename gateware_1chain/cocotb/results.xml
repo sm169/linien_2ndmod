@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1727719521" />
+    <testcase name="fm_wave_test" classname="testbench" file="C:\Users\ScottMason(Qrometric\linien_2ndmod\gateware_1chain\cocotb\testbench.py" lineno="5" time="0.7188427448272705" sim_time_ns="10050.001" ratio_time="13980.806055731839" />
+  </testsuite>
+</testsuites>

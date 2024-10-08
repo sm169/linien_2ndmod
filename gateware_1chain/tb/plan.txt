@@ -1,0 +1,1 @@
+Parking migen simulations for higher level modules as they dont handle specials very well, and dummy modules are a pain to code
